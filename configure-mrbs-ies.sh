@@ -1,5 +1,5 @@
 #!/bin/bash
-# wget https://raw.githubusercontent.com/raultm/setup-mrbs/master/configure-mrbs-ies.sh && sh ./configure-mrbs-ies.sh
+# wget https://raw.githubusercontent.com/raultm/setup-mrbs/master/configure-mrbs-ies.sh && sh ./configure-mrbs-ies.sh && rm ./configure-mrbs-ies.sh*
 
 # MRBS CONFIG FILE
 cp /var/www/html/config.inc.php-sample /var/www/html/config.inc.php
