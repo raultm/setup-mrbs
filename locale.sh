@@ -9,8 +9,9 @@ while true; do
     case $yn in
         [YySs]* ) 
           echo "Vamos a configurar los locale en español";
-          sudo locale-gen "es_ES.UTF-8";
-          sudo dpkg-reconfigure locales;
+          update-locale "LANG=es_ES.UTF-8"
+          locale-gen --purge "es_ES.UTF-8"
+          dpkg-reconfigure --frontend noninteractive locales
           break;;
         [Nn]* ) exit;;
         * ) echo "Contesta con yes o no.";;
