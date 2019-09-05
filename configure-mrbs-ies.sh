@@ -1,18 +1,23 @@
 #!/bin/bash
 # wget https://raw.githubusercontent.com/raultm/setup-mrbs/master/configure-mrbs-ies.sh && sh ./configure-mrbs-ies.sh
 
-info "Indica email del administrador "
+# MRBS CONFIG FILE
+cp /var/www/html/config.inc.php-sample /var/www/html/config.inc.php
+# https://stackoverflow.com/questions/11245144/replace-whole-line-containing-a-string-using-sed
+sed -i '/Europe\/London/c\$timezone = "Europe\/Madrid";' /var/www/html/config.inc.php
+
+echo "Indica email del administrador "
 read ADMINEMAIL
 
-info "Indica nombre del centro (ejemplo: IES Castuera) "
+echo "Indica nombre del centro (ejemplo: IES Castuera) "
 read COMPANY
 
-info "Indica nombre del usuario de tu ldap que será el administrador de mrbs (despues podrás añadir usuarios adicionales en el archivo de configuración)"
+echo "Indica nombre del usuario de tu ldap que será el administrador de mrbs (despues podrás añadir usuarios adicionales en el archivo de configuración)"
 read ADMINUSER
 
 cat <<EOT >> /var/www/html/config.inc.php
 \$mrbs_admin = "Administrador";
-\$mrbs_admin_email = "${AULA}";
+\$mrbs_admin_email = "${ADMINEMAIL}";
 \$mrbs_company = "${COMPANY}";
 \$mrbs_company_url = "" 
 \$weekstarts = 1;
