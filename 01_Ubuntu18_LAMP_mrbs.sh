@@ -1,5 +1,5 @@
 #!/bin/bash
-# wget https://raw.githubusercontent.com/raultm/setup-mrbs/master/setup-mrbs-ubuntu18.sh && sh ./setup-mrbs-ubuntu18.sh
+# wget https://raw.githubusercontent.com/raultm/setup-mrbs/master/01_Ubuntu18_LAMP_mrbs.sh && sh ./01_Ubuntu18_LAMP_mrbs.sh && rm ./01_Ubuntu18_LAMP_mrbs.sh
 
 
 # APT
@@ -28,8 +28,3 @@ mysql mrbs < mrbs-1.7.3/tables.my.sql
 mysql -e "CREATE USER 'mrbs'@'localhost' IDENTIFIED BY 'mrbs-password';"
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'mrbs'@'localhost';"
 mysql -e "FLUSH PRIVILEGES;"
-
-# MRBS CONFIG FILE
-cp /var/www/html/config.inc.php-sample /var/www/html/config.inc.php
-# https://stackoverflow.com/questions/11245144/replace-whole-line-containing-a-string-using-sed
-sed -i '/Europe\/London/c\$timezone = "Europe\/Madrid";' /var/www/html/config.inc.php
