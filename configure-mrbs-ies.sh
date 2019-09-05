@@ -30,6 +30,7 @@ cat <<EOT >> /var/www/html/config.inc.php
 // This can be an array.
 \$ldap_base_dn = "ou=People,dc=instituto,dc=extremadura,dc=es";
 \$ldap_user_attrib = "uid";
-\$ldap_filter_base_dn = "ou=Group,dc=instituto,dc=extremadura,dc=es"; $ldap_filter_user_attr = "memberuid";
+\$ldap_filter_base_dn = "ou=Group,dc=instituto,dc=extremadura,dc=es"; 
+\$ldap_filter_user_attr = "memberuid";
 \$ldap_filter = "cn=teachers";
 EOT
