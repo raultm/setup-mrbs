@@ -1,4 +1,6 @@
 #!/bin/bash
+# bash <(curl -s https://raw.githubusercontent.com/raultm/setup-mrbs/master/setup-mrbs-ubuntu18.sh)
+
 
 # APT
 apt-get update
