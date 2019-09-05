@@ -6,13 +6,13 @@ cp /var/www/html/config.inc.php-sample /var/www/html/config.inc.php
 # https://stackoverflow.com/questions/11245144/replace-whole-line-containing-a-string-using-sed
 sed -i '/Europe\/London/c\$timezone = "Europe\/Madrid";' /var/www/html/config.inc.php
 
-echo "Indica email del administrador "
+printf "\nIndica email del administrador:"
 read ADMINEMAIL
 
-echo "Indica nombre del centro (ejemplo: IES Castuera) "
+printf "\nIndica nombre del centro (ejemplo: IES Castuera):"
 read COMPANY
 
-echo "Indica nombre del usuario de tu ldap que será el administrador de mrbs (despues podrás añadir usuarios adicionales en el archivo de configuración)"
+printf "\nIndica nombre del usuario de tu ldap que será el administrador de mrbs (despues podrás añadir usuarios adicionales en el archivo de configuración /var/www/html/config.inc.php):"
 read ADMINUSER
 
 cat <<EOT >> /var/www/html/config.inc.php
