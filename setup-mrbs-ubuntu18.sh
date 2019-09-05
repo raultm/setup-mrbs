@@ -13,7 +13,7 @@ apt-get install apache2 apache2-bin apache2-data apache2-utils libapache2-mod-ph
 apt-get install libapache2-mod-php php-common php-cli php-common php-json php-ldap php-mysql php-opcache php-readline
 
 # MRBS
-
+wget https://github.com/raultm/setup-mrbs/raw/master/mrbs-1.7.3.tar.gz
 tar -xvf mrbs-1.7.3.tar.gz
 mv mrbs-1.7.3/web/* /var/www/html
 
