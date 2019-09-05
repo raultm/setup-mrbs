@@ -14,6 +14,9 @@ apt-get install -y apache2 apache2-bin apache2-data apache2-utils libapache2-mod
 # PHP
 apt-get install -y libapache2-mod-php php-common php-cli php-common php-json php-ldap php-mysql php-opcache php-readline
 
+# Tras instalar modulos php reiniciar apache
+service apache2 restart
+
 # MRBS
 wget https://github.com/raultm/setup-mrbs/raw/master/mrbs-1.7.3.tar.gz
 tar -xvf mrbs-1.7.3.tar.gz
