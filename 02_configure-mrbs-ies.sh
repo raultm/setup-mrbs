@@ -1,5 +1,5 @@
 #!/bin/bash
-# wget https://raw.githubusercontent.com/raultm/setup-mrbs/master/configure-mrbs-ies.sh && sh ./configure-mrbs-ies.sh && rm ./configure-mrbs-ies.sh*
+# wget https://raw.githubusercontent.com/raultm/setup-mrbs/master/02_configure-mrbs-ies.sh && sh ./02_configure-mrbs-ies.sh && rm ./02_configure-mrbs-ies.sh
 
 # REMOVE APACHE index
 rm /var/www/html/index.html
