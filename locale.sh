@@ -7,12 +7,12 @@ echo "http://$(hostname -I)"
 while true; do
     read -p "¿Aparecen en inglés?" yn
     case $yn in
-        [Yy]* ) 
+        [YySs]* ) 
           echo "Vamos a configurar los locale en español";
           sudo locale-gen "es_ES.UTF-8";
           sudo dpkg-reconfigure locales;
           break;;
         [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
+        * ) echo "Contesta con yes o no.";;
     esac
 done
