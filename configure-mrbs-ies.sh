@@ -1,6 +1,8 @@
 #!/bin/bash
 # wget https://raw.githubusercontent.com/raultm/setup-mrbs/master/configure-mrbs-ies.sh && sh ./configure-mrbs-ies.sh && rm ./configure-mrbs-ies.sh*
 
+# REMOVE APACHE index
+rm /var/www/html/index.html
 # MRBS CONFIG FILE
 cp /var/www/html/config.inc.php-sample /var/www/html/config.inc.php
 # https://stackoverflow.com/questions/11245144/replace-whole-line-containing-a-string-using-sed
