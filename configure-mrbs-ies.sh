@@ -19,10 +19,10 @@ cat <<EOT >> /var/www/html/config.inc.php
 \$mrbs_admin = "Administrador";
 \$mrbs_admin_email = "${ADMINEMAIL}";
 \$mrbs_company = "${COMPANY}";
-\$mrbs_company_url = "" 
+\$mrbs_company_url = "";
 \$weekstarts = 1;
 
-// Configuración para acceder via ldap 
+// Configuración para acceder via ldap
 \$auth["type"] = "ldap";
 \$auth["admin"][] = "${ADMINUSER}"; //Usuario de la ldap que va a ser adminstrador de la aplicación $auth["admin"][] = "usuario2"//Podéis poner todos los usuarios que se quieran para administrar // Where is the LDAP server.
 \$ldap_host = "servidor";
