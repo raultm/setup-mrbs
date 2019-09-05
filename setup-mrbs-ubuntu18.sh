@@ -1,18 +1,18 @@
 #!/bin/bash
-# bash <(curl -s https://raw.githubusercontent.com/raultm/setup-mrbs/master/setup-mrbs-ubuntu18.sh)
+# wget https://raw.githubusercontent.com/raultm/setup-mrbs/master/setup-mrbs-ubuntu18.sh && sh ./setup-mrbs-ubuntu18.sh
 
 
 # APT
 apt-get update
 
 # MySQL & php-mysql
-apt-get install mysql-client-5.7 mysql-client-core-5.7 mysql-common mysql-server mysql-server-5.7 mysql-server-core-5.7 php-mysql
+apt-get install -y mysql-client-5.7 mysql-client-core-5.7 mysql-common mysql-server mysql-server-5.7 mysql-server-core-5.7 php-mysql
 
 # APACHE
-apt-get install apache2 apache2-bin apache2-data apache2-utils libapache2-mod-php
+apt-get install -y apache2 apache2-bin apache2-data apache2-utils libapache2-mod-php
 
 # PHP
-apt-get install libapache2-mod-php php-common php-cli php-common php-json php-ldap php-mysql php-opcache php-readline
+apt-get install -y libapache2-mod-php php-common php-cli php-common php-json php-ldap php-mysql php-opcache php-readline
 
 # MRBS
 wget https://github.com/raultm/setup-mrbs/raw/master/mrbs-1.7.3.tar.gz
